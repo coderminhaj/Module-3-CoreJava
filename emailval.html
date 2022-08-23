@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="" onsubmit="formSub(); return false">
+        <label for="">Email</label>
+        <input type="text" class="form-control" id="emailinp" placeholder=" Put yout mail">
+        </div><br><br>
+
+
+        <input type="submit" name="" id="">
+
+    </form>
+
+
+    <h2 id="message"></h2>
+
+    <script>
+
+
+        function formSub() {
+            var einp = document.getElementById("emailinp").value
+            var atpose = einp.indexOf("@")
+            var dotpos = einp.indexOf(".")
+
+
+            
+
+
+            if (!einp) {
+                document.getElementById("message").innerHTML = "Please Put Your Mail First";
+
+            } else if (atpose < 0) {
+                document.getElementById("message").innerHTML = "The mail is not valid";
+
+            } else if (dotpos < 0) {
+
+                document.getElementById("message").innerHTML = "The mail is not valid";
+
+
+            } else {
+                document.getElementById("message").innerHTML = "The mail is a valid Mail";
+
+            }
+
+
+
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>
